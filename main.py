@@ -1,11 +1,15 @@
+# For information please refer to "README.md"
+
 from Order import *
 from OrderNum import *
 from others import *
 import pandas as pd
 import numpy as np
 
-
+# To read in the customer name list from the excel
 def readCustomer(fileName):
+    '''Read in the customer names from excel file
+        and put into a list'''
     customerFile = pd.read_excel(fileName)
     data = customerFile.values
     storeList = []
@@ -15,7 +19,10 @@ def readCustomer(fileName):
     return storeList
 
 
+# To read in the staff name list from the excel
 def readStaff(fileName):
+    '''Read in the staff names from excel file
+        and put into a list'''
     staffFile = pd.read_excel(fileName)
     data = staffFile.values
     storeList = []
@@ -25,7 +32,10 @@ def readStaff(fileName):
     return storeList
 
 
+# To read in the goods list from the excel
 def readGoods(fileName):
+    '''Read in the good names from excel file
+        and put into a list'''    
     goodsFile = pd.read_excel(fileName)
     data = goodsFile.values
     totalGoodsList = []
